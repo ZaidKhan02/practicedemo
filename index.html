@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bfcdefc638.js" crossorigin="anonymous"></script> <!--for icons-->
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo-header">
+                    <h1><span>Z</span>K.</h1>
+                </div>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="design">
+                <div class="ring">
+                    <i style="--clr: #00ff0a"></i>
+                    <i style="--clr: #ff0057"></i>
+                    <i style="--clr: #fffd44"></i>
+                    <i style="--clr: #2e05ff"></i>
+                    <div class="circle">
+                        <div class="mini-circle"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-text" <p>Web Developer</p>
+                <h1>Hi, I'm <span>Zaid</span> Khan</h1>
+            </div>
+        </div>
+    </div>
+    <!----------------About-------------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        I am a passionate web developer with experience in HTML, CSS, JavaScript, and frameworks like
+                        React.js. I excel in creating responsive, user-friendly websites and applications. I have base
+                        knowledge on backend web development in languages such as MongoDB, Node.js, Express, and MySQL,
+                        and am able to pick up on these quickly. I have gained a good understanding of web
+                        development through personal and academic projects, and I am eager to continue learning and
+                        growing as a web developer and collaborate on exciting projects. </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend</span><br>HTML, CSS, JavaScript, EJS, React.js, Material UI, Bootstrap
+                            </li>
+                            <li><span>Backend</span><br>Node.js, Express, MongoDB, MySQL</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>GTA Tools E-commerce website</span><br>React.js</li>
+                            <li><span>DreamEleven</span><br>HTML, CSS, JavaScript, MongoDB, Node.js, Express</li>
+                            <li><span>DreamEleven Builder</span><br>React.js</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-2025</span><br>Computer Engineering from Toronto Metropolitan University
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------services------------------>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Front-end Web Development</h2>
+                    <p>Proficient in HTML, CSS, JavaScript, and front-end frameworks like React.js which ensures that
+                        the web applications created are visually appealing and interactive that provide an excellent
+                        user
+                        experience.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Back-end Web Development</h2>
+                    <p>Experience working with the back-end technologies such as Node.js and Express, and database
+                        management (SQL, MongoDB). This ensures the security and performance of the web applications.
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-object-ungroup"></i>
+                    <h2>Responsive Web Design</h2>
+                    <p>Experience with frameworks such as Bootstrap. Responsive web design ensures that websites are
+                        accessible and provide a good user experience across a wide range of devices, from desktop
+                        computers to mobile phones.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------portfolio----------------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img class="work-images" src="images/business.png">
+                    <div class="layer">
+                        <h3>GTA Tools E-commerce</h3>
+                        <p>GTA Tools allows you to browse and order a variety of types of oil and tools.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img class="work-images" src="images/DreamEleven5.png">
+                    <div class="layer">
+                        <h3>DreamEleven</h3>
+                        <p>DreamEleven allows you to share your football lineups with other users and rate other
+                            lineups.
+                        </p>
+                        <a href="https://dreameleven.onrender.com/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img class="work-images" src="images/lineup.png">
+                    <div class="layer">
+                        <h3>DreamEleven Builder</h3>
+                        <p>DreamEleven Builder is an online football lineup creator where you can build your own
+                            football lineups.
+                        </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------contact----------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p> <i class="fa-solid fa-paper-plane"></i> zaidmkhan1803@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> 647-702-1803</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/ZaidKhan02" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://ca.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn bt2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Zaid Khan.</p>
+        </div>
+    </div>
+
+    <script>
+        const tablinks = document.getElementsByClassName("tab-links");
+        const tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab"); /*so if we click on education, it will send the education in the p tag in line 46 as the tabname in the function, inside the bracket, and it will search by document.getlelementbyeducation*/
+            /*reason we did getelementbyid is cuz for each tab, we gave it the id of what it is like skills, experience, education.*/
+        }
+    </script>
+
+    <script>
+        const sidemeu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemeu.style.right = "0"; /*this will show the nav menu when it is equal to 0. As mentioned in css, the width was 200 and we set it to -200 so its not shown.*/
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwM3wyXigfw3zYxcRoU_NQstL8oEqgiAR0joGHL2N5P81RIW5MYovaHtQ61vj7Y2MOY/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully!"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000) /*so after 5000 ms, 5 seconds, the message will dissappear*/
+                    form.reset() /*it will reset the input form, like the name,email,message will be blank*/
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+
+</html>

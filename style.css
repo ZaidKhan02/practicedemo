@@ -1,0 +1,630 @@
+* {
+    /*star is a universal selector, so select all elements and do the following to them*/
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /*when you click the nav, it scrolls u to its section*/
+}
+
+body {
+    background-color: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+
+    background-size: cover;
+    /*make the image visible in the size of the screen. At first it was zoomed in to the face*/
+    background-position: center;
+    background-attachment: fixed;
+    /*position: fixed;*/
+    /*background-color: gray;*/
+    /*keeps the background image fixed while scrolling*/
+}
+
+.logo-header {
+    font-size: 30px;
+}
+
+.logo-header span {
+    color: #00a2ff;
+}
+
+.container {
+    padding: 10px 10%;
+    /*10px from top and bottom and 10% from left and right*/
+}
+
+nav {
+    display: flex;
+    /*images and links will be side by side*/
+    align-items: center;
+    justify-content: space-between;
+    /*creates space between the image logo and the links, since those are the 2 elements inside nav. At first, they were side by side*/
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 140px;
+}
+
+nav ul li {
+    display: inline-block;
+    /*it will be horizontally displayed. at first they were in a vertical column*/
+    list-style: none;
+    margin: 10px 20px;
+    /*10 from top and bottom and 20 from left and right*/
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    /* */
+}
+
+nav ul li a::after {
+    /*after is for IDK DETERMINE WHY. Thing is, this whole code is for the underline, whereas for the one above was for the text. maybe the after means after the tet this happens?*/
+    content: '';
+    width: 0;
+    /*it's hidden, but when you hover, it will be shown, hence its 0 here but 100 for hover*/
+    height: 3px;
+    /*the height of the underline*/
+    background-color: #00a2ff;
+    ;
+    /*the color of the underline*/
+    position: absolute;
+    /*removing this removes the underline. I think it shows that it is positioned relative to nearest positioned ancestor*/
+    left: 0;
+    /* */
+    bottom: -6px;
+    /*without this, the unerline is above the text. with this, the underline is below the text*/
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 300px;
+    /*35%*/
+    font-size: 30px;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    color: #00a2ff;
+}
+
+.design {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    margin-top: 250px;
+}
+
+.ring {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+
+}
+
+.circle {
+    display: flex;
+    /* */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 5px solid rgb(0, 123, 255);
+    border-radius: 100%;
+    animation: animate3 10s linear infinite;
+}
+
+.mini-circle {
+    position: absolute;
+    /* */
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    top: 0px;
+    border-radius: 100%;
+}
+
+@keyframes animate3 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ring i {
+    position: absolute;
+    inset: 0;
+    border: 2px solid #fff;
+    transition: 0.5s;
+}
+
+.ring i:nth-child(1) {
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: animate 6s linear infinite;
+}
+
+.ring i:nth-child(2) {
+    border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+    animation: animate 4s linear infinite;
+}
+
+.ring i:nth-child(3) {
+    border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+    animation: animate2 10s linear infinite;
+}
+
+.ring i:nth-child(4) {
+    border-radius: 49% 34% 56% 59% / 38% 32% 63% 27%;
+    animation: animate2 15s linear infinite;
+}
+
+.ring i {
+    border: 6px solid var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/*-------------About------------*/
+#about {
+    margin-top: 100px;
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    /*flex puts the text and iamge side by side. at first the text was above the image*/
+    justify-content: space-between;
+    /*at first, the text and images were side by side, this creates space between them and the text is further right*/
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+    /*the width of the column will be 35%*/
+}
+
+.about-col-1 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+    /*in the first column we added the width of 35% and in 2nd column we added width of 60%. so we have 5% space that will be between the image and text, the 2 columns*/
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+    /*20px from top, 0 form left and right and 40 from bottom*/
+}
+
+.tab-links {
+    margin-right: 50px;
+    /*at frist they were side by side without any spaces. cant use justify content space between since we didnt make it a flex*/
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    /*NEED TO STUDY WHAT THIS DOES*/
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #00a2ff;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #00a2ff;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+    /*removes the content from the tabs not active*/
+}
+
+.tab-contents.active-tab {
+    display: block;
+    /*displays the content of active/clicked tab*/
+}
+
+/*-------------services-------------------*/
+#services {
+    padding: 30px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /*REVIEW THIS*/
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div {
+    /*this is for all the individual services. this comes from the div line*/
+    background-color: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+    /*these will be for the individual icons from the line of i*/
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div p {
+    font-size: 15px;
+}
+
+.services-list div:hover {
+    background-color: #00a2ff;
+    transform: translateY(-10px);
+}
+
+/*-------------Portfolio------------*/
+#portfolio {
+    padding: 50px 0;
+    /*so that we have more space top and bottom for the title of My Work*/
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /*REVIEW THIS*/
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    /*this line of code does nothing*/
+    transition: transform 0.5s;
+    /*this was added when we did the hover for image with transform of 1.1. without this line of code, it will just zoom in instantly, with this it eases in.*/
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    /*when it's 0, it's hidden. we want to do this so that this is shown only when we hover over it. we didn't do 0 for width since when i did width 0 and height 100, we had a bit of it showing.*/
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #00a2ff);
+    border-radius: 10px;
+    position: absolute;
+    /*at first, the the description and download link were below the image. to put it on top of the image and inside it, we use this.*/
+    left: 0;
+    bottom: 0;
+    /*however, the descirption and link was hidden, this line displays it, IDK why tho*/
+    overflow: hidden;
+    /*without this, the text is shown in white text at the bottom of the image without hovering*/
+    display: flex;
+    align-items: center;
+    /*this brings the content in the middle of the image*/
+    justify-content: center;
+    flex-direction: column;
+    /*this one is important. after they were in the center from align items, the title, decription, and link were in the middle in one line side by side. to make it so that the title is on top then descirption in middle and logo at the bottom, we need to do this line of code*/
+    padding: 0 40px;
+    text-align: center;
+    /*this centers the text and makes it look better*/
+    font-size: 14px;
+    /*this effects the description text*/
+    transition: height 0.5s;
+    /*when we hover over it, the content of the code for .layer will ease in rather just popping up instantly*/
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #00a2ff;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    /*the padding moves the logo, whereas this moves the text above the logo*/
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+    /*when we hover, it increases the size of image*/
+    /*the reason why we dont put the transition transform 0.5s here is cuz although it will ease into the image, when we hover out of it, it instantly goes back to original size, it doesn't ease out*/
+}
+
+.work:hover .layer {
+    height: 100%;
+    /* this displays the content of layer when hovered*/
+    /*like the stuff for hover img, we didn't put the transition height 0.5s here since when we hover out of it, it doesn't ease out*/
+}
+
+.work-images {
+    height: 450px;
+}
+
+/*-------------Contact------------*/
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #00a2ff;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #00a2ff;
+    transform: translateY(-5px);
+}
+
+.btn {
+    display: inline-block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #00a2ff;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #00a2ff;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background-color: #00a2ff
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background-color: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+nav .fa-solid {
+    display: none;
+}
+
+/*this is to hide the x and menu bar for the nav on a normal sized screen. we put it in the html file but dont want to show it on the computer screen, only on the phone screen. so we display it in the media queries*/
+
+/*-------------css for small screens------------*/
+@media only screen and (max-width: 600px) {
+
+    /*on screens that are 600px or less, do the following*/
+    #header {
+        background-image: url(images/phone-background.png);
+        /*we now use the things we did above and make changes to them, for computer screen we did this udner #header, so we use that and change it for phone size*/
+    }
+
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    nav .fa-solid {
+        display: block;
+        /*will be showed on top of each other, first x then menu*/
+        font-size: 25px;
+    }
+
+    nav ul {
+        background-color: #00a2ff;
+        position: fixed;
+        /*without this, the bar goes from right end to near middle*/
+        top: 0;
+        /*without this, only top part is being shown without the text*/
+        right: -200px;
+        /*-200px since the width is 200px, so it will move further right by 200px and it will be hidden. if it were right to be just 0, it will be shown and at the far right end*/
+        width: 200px;
+        height: 100vh;
+        /*without this, the bar is only 40% from the top*/
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+        /*it eases it when we click and cancel the nav menu*/
+    }
+
+    nav ul li {
+        display: block;
+        /*they are listed vertically in a column, without this, they were listed 4 on the left of nav and one was listed on right*/
+        margin: 25px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        /*at first it was below the contact and on the left end*/
+        left: 25px;
+        /*now its not on the left end but aligned in the column with the text*/
+        cursor: pointer;
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    /*it was a small image of me on the left side and right side was empty. this makes the image take up the whole space*/
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-right,
+    .contact-left {
+        flex-basis: 100%;
+        /*at first, the columns were stacked on the left side, doing this makes them take up the whole space, including the empty right side*/
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+}
+
+#msg {
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
